@@ -3,18 +3,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    //grid using char
+        Scanner scanner = new Scanner(System.in);
+        boolean running=true;
+        char player = 'X';
 
-        char[][] grid = new char [4][4];
-        for(int row =0;row<grid.length;row++){
-            for(int col=0;col<grid[row].length;col++){
-                grid[row][col]='o';
-            }
-        }
+    //grid using char
+        char[][] grid = {
+                {' ','|',' ','|',' '},
+                {'-','+','-','+','-'},
+                {' ','|',' ','|',' '},
+                {'-','+','-','+','-'},
+                {' ','|',' ','|',' '},
+        };
         System.out.println(Arrays.deepToString(grid));
 
 
+        //moves
 
     }
+    public static boolean won( char player){
 
+        return false;
+    }
+
+    public static void printGrid(char[][] grid){
+
+    }
 }
