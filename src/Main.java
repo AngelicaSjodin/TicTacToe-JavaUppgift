@@ -7,7 +7,7 @@ public class Main {
 
         //variables
         boolean running=true;   //keeps the game running
-        int turnTracker=-1;      //keep track of who's turn it is
+        int turnTracker=-1;     //keep track of who's turn it is
 
         //asking for player names
         System.out.println("Player ones's name (goes first):");
