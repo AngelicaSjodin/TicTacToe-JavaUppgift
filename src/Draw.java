@@ -13,7 +13,8 @@ public class Draw {
                                             //if so, the game ends in a draw
         }
         System.out.println("draw");
-        //PlayAgain.question(Main.startGame());
+        System.out.println("no winners");
+        PlayAgain.question();
 
 
     }
