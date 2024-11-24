@@ -18,14 +18,13 @@ public class Main{
 
         //asking for player names
         System.out.println("Player ones's name (goes first):");
-        String playerOne = scanner.next();
+        String playerOne = scanner.next();                          //playerOnes name
         System.out.println("Player two's name (goes second):");
-        String playerTwo = scanner.next();
+        String playerTwo = scanner.next();                          //playerTwos anem
 
         //using objects from classes
         Grid grid = new Grid();                 //how the grid should look like
-        //PrintGrid printGrid = new PrintGrid();  //how the grid should be printed
-        Grid.gridLoop();         //prints whole game board
+        Grid.gridLoop();                        //prints whole game board
         PosChoice posChoice = new PosChoice();  //gets switch case method from class
         CheckWin checkWin = new CheckWin();     //gets possible win
         Draw draw = new Draw();
@@ -39,8 +38,8 @@ public class Main{
             System.out.println("type a number from 1-9 to choose your place on the board:");
             int position = scanner.nextInt();
             PosChoice.posChoice(Grid.chars, position, turnTracker);     //places wanted position on board
-            Grid.gridLoop();                             //shows board again
-            CheckWin.X(Grid.chars, running);                                     //Checks if win for first player
+            Grid.gridLoop();                                            //shows board again
+            CheckWin.X(Grid.chars, playerOne);                          //Checks if win for first player
             Draw.draw(Grid.chars);                                      //checks for draw
 
 
@@ -51,8 +50,8 @@ public class Main{
 
             position = scanner.nextInt();
             PosChoice.posChoice(Grid.chars, position, turnTracker);     //places wanted position on board
-            Grid.gridLoop();                             //shows board again
-            CheckWin.O(Grid.chars);                                     //Checks if win for second player
+            Grid.gridLoop();                                            //shows board again
+            CheckWin.O(Grid.chars, playerTwo);                                     //Checks if win for second player
             Draw.draw(Grid.chars);                                      //checks for draw
 
         }
