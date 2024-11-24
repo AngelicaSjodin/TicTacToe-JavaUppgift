@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PosChoice extends Main{
+public class PosChoice{
     public static void posChoice(char[][] grid, int position, int turnTracker) {
         Scanner scanner = new Scanner(System.in);
 
