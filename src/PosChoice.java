@@ -22,8 +22,8 @@ public class PosChoice extends Main{
                         } else {                                                        //if position is empty it adds the new value to the board and ends the loop :D
                             grid[0][0] = playerOnePos;
                             validPositionX=true;
-                        }                                                               //could have made this class more clean with another class or two however that requires more brainpower of me
-                        break;                                                          //and sadly i do not have the time :/
+                        }                                                               //could have made this class more cleaner adn shorter with another class or two
+                        break;                                                          //however that requires more brainpower of me and sadly i do not have the time :(
 
                     case 2:
                         if (grid[0][2] == 'X' || grid[0][2] == 'O') {
