@@ -1,5 +1,5 @@
 public class Grid {
-    char[][]chars = {
+    static char[][]chars = {
             {' ','|',' ','|',' '},
             {'-','+','-','+','-'},
             {' ','|',' ','|',' '},

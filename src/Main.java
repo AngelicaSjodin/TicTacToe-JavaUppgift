@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);//scanner takes in value from user
@@ -8,6 +8,8 @@ public class Main {
         //variables
         boolean running=true;   //keeps the game running
         int turnTracker=-1;     //keep track of who's turn it is
+
+
 
         //asking for player names
         System.out.println("Player ones's name (goes first):");
@@ -19,11 +21,14 @@ public class Main {
         Grid grid = new Grid();                 //how the grid should look like
         PrintGrid printGrid = new PrintGrid();  //how the grid should be printed
         PrintGrid.gridLoop(grid.chars);         //prints whole game board
-        PosChoice posChoice = new PosChoice();  // gets switch case method from class
+        PosChoice posChoice = new PosChoice();  //gets switch case method from class
+        CheckWin checkWin = new CheckWin();     //gets possible win
 
-
+        char first='X';
+        char second='O';
 
         while(running) {
+
             turnTracker+=1;
             //gets desired position from user one
             System.out.println(playerOne+"'s turn.");
@@ -31,6 +36,8 @@ public class Main {
             int position = scanner.nextInt();
             PosChoice.posChoice(grid.chars, position, turnTracker);     //places wanted position on board
             PrintGrid.gridLoop(grid.chars);                             //shows board again
+            CheckWin.X(grid.chars);                                     //Checks if win for first player
+
 
             turnTracker+=1;
             //gets desired position from user two
@@ -40,7 +47,7 @@ public class Main {
             position = scanner.nextInt();
             PosChoice.posChoice(grid.chars, position, turnTracker);     //places wanted position on board
             PrintGrid.gridLoop(grid.chars);                             //shows board again
-
+            CheckWin.O(grid.chars);                                     //Checks if win for second player
 
         }
     }
